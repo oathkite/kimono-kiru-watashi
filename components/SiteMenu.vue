@@ -24,6 +24,9 @@
 $color: rgb(194, 167, 49);
 
 .site-menu {
+    position: relative;
+    z-index: 100;
+
     ul {
         display: flex;
         list-style-type: none;

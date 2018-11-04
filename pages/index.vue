@@ -38,7 +38,7 @@ export default {
 <style lang="scss" scoped>
 .kv {
     @include media(sm, max) {
-        padding-top: 16px;
+        // padding-top: 16px;
     }
 }
 
