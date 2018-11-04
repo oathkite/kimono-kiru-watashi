@@ -1,3 +1,13 @@
+<script>
+export default {
+    head () {
+        return {
+            title: '訪問着付け'
+        }
+    }
+}
+</script>
+
 <template>
     <section class="container">
         <div>
@@ -5,7 +15,3 @@
         </div>
     </section>
 </template>
-
-<style>
-
-</style>

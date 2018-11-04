@@ -2,9 +2,9 @@
 import SiteHeader from '~/components/Header.vue'
 
 export default {
-  components: {
-    SiteHeader
-  }
+    components: {
+        SiteHeader
+    }
 }
 </script>
 
