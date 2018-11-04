@@ -56,8 +56,8 @@ $color: rgb(194, 167, 49);
 
     @include media(sm, max) {
         svg {
-            height: 28px;
-            width: auto;
+            height: auto;
+            width: 120px;
         }
     }
 }
