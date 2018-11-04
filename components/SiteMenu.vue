@@ -27,9 +27,10 @@ $color: rgb(194, 167, 49);
     ul {
         display: flex;
         list-style-type: none;
+        padding-left: 0;
 
         li + li {
-            margin-left: 32px;
+            margin-left: 40px;
         }
 
         a {

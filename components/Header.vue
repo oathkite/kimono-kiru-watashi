@@ -39,6 +39,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+$color: rgb(194, 167, 49);
+
 .site-header {
     display: flex;
     align-items: center;
@@ -63,7 +65,9 @@ export default {
 .contact {
     display: flex;
     align-items: center;
-    margin-left: 48px;
+    margin-left: 32px;
+    padding-left: 32px;
+    border-left: 1px dashed $color;
 }
 
 .actions {
