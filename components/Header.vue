@@ -68,6 +68,12 @@ $color: rgb(194, 167, 49);
     margin-left: 32px;
     padding-left: 32px;
     border-left: 1px dashed $color;
+
+    @include media(xl, max) {
+        border: none;
+        padding-left: 0;
+        margin-left: 0;
+    }
 }
 
 .actions {
