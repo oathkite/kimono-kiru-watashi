@@ -3,3 +3,13 @@ body {
     font-family: 'Noto Serif JP', sans-serif;
     background: #FFF7E7;
 }
+
+body {
+    @include media(xl, max) {
+        padding-bottom: 55px;
+    }
+
+    @include media(sm, max) {
+        padding-bottom: 50px;
+    }
+}
