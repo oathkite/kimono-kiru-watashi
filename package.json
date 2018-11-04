@@ -1,0 +1,23 @@
+{
+  "name": "kimono-kiru-watashi",
+  "version": "1.0.0",
+  "description": "Introduction website for Kimono Kiru Watashi",
+  "author": "oathkite",
+  "private": true,
+  "scripts": {
+    "start": "nuxt dev",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "cross-env": "^5.2.0",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free-webfonts": "^1.0.9",
+    "node-sass": "^4.9.4",
+    "nodemon": "^1.11.0",
+    "nuxt-sass-resources-loader": "^2.0.5",
+    "sass-loader": "^7.1.0",
+    "yarn": "^1.12.1"
+  }
+}
