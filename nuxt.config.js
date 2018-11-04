@@ -7,11 +7,11 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    titleTemplate: '%s | きもの 着る・私',
+    titleTemplate: '%s | きもの 着る・私 － 石川・富山の訪問着付教室',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: pkg.description }
+      { hid: 'description', name: 'description', content: '石川・富山の訪問着付教室' }
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
