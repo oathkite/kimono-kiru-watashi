@@ -30,8 +30,8 @@ export default {
                 <div>
                     <round-button size="s">お問い合わせ</round-button>
                 </div>
-                <div>
-                    <i class="fas fa-phone"></i> 076-273-4182
+                <div class="call">
+                    <i class="fas fa-phone"></i> <a href="tel:0762734182">076-273-4182</a>
                 </div>
             </div>
         </div>
@@ -58,6 +58,21 @@ $color: rgb(194, 167, 49);
         svg {
             height: auto;
             width: 120px;
+        }
+    }
+}
+
+.call {
+    a {
+        text-decoration: none;
+        color: #000;
+        pointer-events: none;
+    }
+    
+    @include media(md, max) {
+        a {
+            text-decoration: underline;
+            pointer-events: auto;
         }
     }
 }
