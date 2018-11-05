@@ -36,12 +36,6 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-.kv {
-    @include media(sm, max) {
-        // padding-top: 16px;
-    }
-}
-
 .intro {
     text-align: center;
     padding: 48px 32px;
