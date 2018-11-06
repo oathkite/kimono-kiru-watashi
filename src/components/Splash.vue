@@ -1,4 +1,18 @@
+<template>
+    <section class="splash" v-if="!this.$store.state.showSplash">
+        <div class="splash-text">
+            <span>あ</span>
+            <span>、</span>
+            <span>着</span>
+            <span>れ</span>
+            <span>た</span>
+            <span>！</span>
+        </div>
+    </section>
+</template>
+
 <script>
+import {mapMutations, mapGetters} from 'vuex'
 import Anime from 'animejs'
 
 export default {
@@ -6,6 +20,9 @@ export default {
         this.show()
     },
     methods: {
+        ...mapMutations({
+            finish: 'finishSplash'
+        }),
         show: function() {
             Anime({
                 targets: '.splash-text span',
@@ -18,6 +35,7 @@ export default {
                 },
                 complete: (Anime) => {
                     this.disappear()
+                    this.finish()
                 }
             })
         },
@@ -28,29 +46,12 @@ export default {
                 translateY: 0,
                 duration: 1200,
                 easing: 'easeOutBack',
-                delay: 800,
-                complete: (Anime) => {
-                    this.$store.commit('toggleSplash')
-                }
+                delay: 800
             })
         }
     }
 }
 </script>
-
-
-<template>
-    <section class="splash" v-if="this.$store.state.showSplash">
-        <div class="splash-text" @click="$store.commit('toggleSplash')">
-            <span>あ</span>
-            <span>、</span>
-            <span>着</span>
-            <span>れ</span>
-            <span>た</span>
-            <span>！</span>
-        </div>
-    </section>
-</template>
 
 <style lang="scss" scoped>
 .splash {

@@ -1,9 +1,13 @@
 export const state = () => ({
-    showSplash: true
+    isSplashFinish: false
 })
 
+export const getters = {
+    isSplashFinish: state => state.isSplashFinish
+}
+
 export const mutations = {
-    toggleSplash (state) {
-        state.showSplash = !state.showSplash
+    finishSplash (state) {
+        state.isSplashFinish = true
     }
 }
