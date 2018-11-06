@@ -1,5 +1,5 @@
 <template>
-    <section class="splash" v-if="!this.$store.state.showSplash">
+    <section class="splash" v-if="!this.$store.state.isSplashFinish">
         <div class="splash-text">
             <span>あ</span>
             <span>、</span>
