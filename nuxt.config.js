@@ -2,7 +2,7 @@ const pkg = require('./package')
 
 module.exports = {
   mode: 'spa',
-  srcDir: 'src/',
+  srcDir: 'src',
   head: {
     titleTemplate: '%s | きもの 着る・私 － 石川・富山の訪問着付教室',
     meta: [

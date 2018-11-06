@@ -60,7 +60,7 @@ $color: rgb(194, 167, 49);
             // font-size: 12px;
             justify-content: space-between;
             padding: 0 24px;
-            
+
             li {
                 margin-left: 0!important;
 

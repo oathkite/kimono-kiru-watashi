@@ -1,9 +1,11 @@
 <script>
 import KeyVisual from '~/components/KeyVisual.vue'
+import Splash from '~/components/Splash.vue'
 
 export default {
     components: {
-        KeyVisual
+        KeyVisual,
+        Splash
     },
     head () {
         return {
@@ -16,6 +18,7 @@ export default {
 
 <template>
     <section class="container">
+        <Splash/>
         <key-visual class="kv"></key-visual>
 
         <section class="intro">

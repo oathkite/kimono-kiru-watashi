@@ -15,9 +15,11 @@ export default {
 <template>
     <header class="site-header">
         <h1 class="site-title">
-            <nuxt-link to="/">
+            <nuxt-link class="logo" to="/">
                 <logo/>
             </nuxt-link>
+
+            <img class="shibori" src="~/static/images/shibori.png" alt="">
         </h1>
 
         <site-menu class="site-menu" />
@@ -28,7 +30,9 @@ export default {
             </div>
             <div class="actions">
                 <div>
-                    <round-button size="s">お問い合わせ</round-button>
+                    <a class="button" href="https://docs.google.com/forms/d/1NcGRgto2Sh7yPCXoPlf6FYNUeSQYhNcth8LquxNDNhY/edit" target="_blank" rel="norefferer">
+                        お問い合わせ
+                    </a>
                 </div>
                 <div class="call">
                     <i class="fas fa-phone"></i> <a href="tel:0762734182">076-273-4182</a>
@@ -40,6 +44,30 @@ export default {
 
 <style lang="scss" scoped>
 $color: rgb(194, 167, 49);
+
+.button {
+    display: inline-block;
+    border: 1px solid $color;
+    padding: 0.6rem 1.8rem;
+    color: #000;
+    text-decoration: none;
+    border-radius: 2rem;
+    transition: all ease 0.2s;
+
+    &:hover {
+        background: $color;
+        color: #fff;
+    }
+
+    &.s {
+        font-size: 0.8rem;
+    }
+
+    @include media(sm, max) {
+        font-size: 0.8rem;
+        padding: 0.4rem 1.2rem;
+    }
+}
 
 .site-header {
     display: flex;
@@ -53,11 +81,30 @@ $color: rgb(194, 167, 49);
 
 .site-title {
     margin-right: auto;
+    position: relative;
+
+    .logo {
+        position: relative;
+        z-index: 1;
+    }
+
+    .shibori {
+        position: absolute;
+        width: 336px;
+        top: -100px;
+        left: -50px;
+    }
 
     @include media(sm, max) {
         svg {
             height: auto;
-            width: 120px;
+            width: 150px;
+        }
+
+        .shibori {
+            width: 200px;
+            top: -50px;
+            left: -20px;
         }
     }
 }
@@ -68,7 +115,7 @@ $color: rgb(194, 167, 49);
         color: #000;
         pointer-events: none;
     }
-    
+
     @include media(md, max) {
         a {
             text-decoration: underline;
@@ -83,6 +130,8 @@ $color: rgb(194, 167, 49);
     margin-left: 32px;
     padding-left: 32px;
     border-left: 1px dashed $color;
+    position: relative;
+    z-index: 10;
 
     @include media(xl, max) {
         border: none;
