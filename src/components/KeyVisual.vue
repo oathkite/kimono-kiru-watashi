@@ -37,9 +37,11 @@
         </div>
 
         <svg viewBox="0 0 1053 581">
-            <image class="kv-image img0" xlink:href="~/static/images/test-kv.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipping-path)"></image>
-            <image class="kv-image img1" xlink:href="~/static/images/test-kv-2.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipping-path)"></image>
-            <image class="kv-image img2" xlink:href="~/static/images/test-kv-3.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipping-path)"></image>
+            <g class="kv-images">
+                <image class="kv-image img0" xlink:href="~/static/images/test-kv.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipping-path)"></image>
+                <image class="kv-image img1" xlink:href="~/static/images/test-kv-2.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipping-path)"></image>
+                <image class="kv-image img2" xlink:href="~/static/images/test-kv-3.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#clipping-path)"></image>
+            </g>
             <clipPath id="clipping-path">
                 <path d="M0.824768329,292.5 C0.824768329,387 112.886061,512 196.090368,537 C279.294676,562 496.203014,581 612.592855,581 C728.982695,581 915.110249,520 972.82422,457 C1030.53819,394 1065.16657,280.5 1047.85238,216.5 C1030.53819,152.5 1002.16215,88.5 906.934104,56.5 C811.706052,24.5 682.811519,8.52651283e-14 541.412291,8.52651283e-14 C400.013064,8.52651283e-14 210.999811,7.5 130.681202,56.5 C50.3625929,105.5 0.824768329,198 0.824768329,292.5 Z" id="path-1"></path>
             </clipPath>
@@ -55,12 +57,21 @@ export default {
     computed: {
         ...mapGetters([
             'isSplashFinish'
-        ])
+        ]),
+        imgMax: function() {
+            return document.querySelectorAll('.kv-image').length - 1
+        },
+        nextSlide: function() {
+            if (this.current >= this.imgMax) {
+                return 0
+            } else {
+                return this.current + 1
+            }
+        }
     },
-    data: function () {
+    data: function() {
         return {
-            current: 0,
-            max: 0
+            current: 0
         }
     },
     watch: {
@@ -73,14 +84,13 @@ export default {
             Anime({
                 targets: '.kv-image.img' + this.current,
                 opacity: 1,
-                easing: 'easeInOutQuad',
-                dulation: 600
+                easing: 'easeInOutQuad'
             })
 
             Anime({
                 targets: '.kv-text.text' + this.current + ' span',
                 opacity: 1,
-                translateY: -5,
+                translateY: [0, -5],
                 easing: 'easeInOutQuad',
                 dulation: 400,
                 delay: function(el, i, l ) {
@@ -96,30 +106,34 @@ export default {
                 targets: '.kv-image.img' + this.current,
                 opacity: 0,
                 easing: 'easeInOutQuad',
-                dulation: 600,
-                delay: 4000,
-                begin: (anim) => {
-                    if (this.current < this.max) {
-                        this.current++
-                    } else {
-                        this.current = 0
-                    }
-                    this.show()
-                }
+                delay: 2000
             })
 
             Anime({
                 targets: '.kv-text.text' + this.current + ' span',
                 opacity: 0,
-                easing: 'easeInOutQuad',
-                dulation: 600,
-                delay: 4000
+                delay: 2000,
+                begin: (anim) => {
+                    this.current = this.nextSlide
+                    this.show()
+                }
+            })
+        },
+        reset: function() {
+            Anime.running.forEach(element => {
+                element.pause()
+                element.reset()
             })
         }
     },
     mounted: function() {
-        this.max = document.querySelectorAll('.kv-image').length - 1
+        if (this.$store.state.isSplashFinish) {
+            this.show()
+        }
     },
+    beforeDestroy: function() {
+        this.reset()
+    }
 }
 </script>
 
@@ -132,7 +146,7 @@ $text-shadow: rgba(0,0,0,0.2);
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 32px;
+    font-size: 2rem;
     color: #fff;
 
     span {
@@ -140,22 +154,17 @@ $text-shadow: rgba(0,0,0,0.2);
         display: inline-block;
     }
 
-    // background: #FFF7E7;
-    // border-radius: 40px;
-    // padding: 8px 16px;
-    // line-height: 1;
-
     text-shadow: 2px 2px 4px $text-shadow;
 
     @include media(sm, max) {
-        font-size: 20px;
+        font-size: 1.4rem;
     }
 }
 
 .kv-wrapper {
     width: calc(100% - 64px);
     max-width: 1120px;
-    padding-bottom: 51.178%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 50%;
@@ -199,6 +208,10 @@ $text-shadow: rgba(0,0,0,0.2);
 
     .kv-image {
         opacity: 0;
+
+        // &:nth-child(1) {
+        //     opacity: 1;
+        // }
     }
 
     @include media(sm, max) {

@@ -1,8 +1,13 @@
 <script>
+import PageTitle from '~/components/PageTitle.vue'
+
 export default {
+    components: {
+        PageTitle
+    },
     head () {
         return {
-            title: '訪問着付け'
+            title: '訪問教室'
         }
     }
 }
@@ -10,8 +15,9 @@ export default {
 
 <template>
     <section class="container">
+        <page-title>訪問教室</page-title>
         <div>
-            訪問着付け
+
         </div>
     </section>
 </template>

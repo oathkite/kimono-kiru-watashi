@@ -54,10 +54,10 @@ $color: rgb(194, 167, 49);
         margin: 0;
         background: #FFF7E7;
         border-top: 1px solid $color;
+        background: #fff;
 
         ul {
             padding-left: 0;
-            // font-size: 12px;
             justify-content: space-between;
             padding: 0 24px;
 
@@ -75,7 +75,7 @@ $color: rgb(194, 167, 49);
 
     @include media(sm, max) {
         ul {
-            font-size: 12px;
+            // font-size: 1rem;
             padding: 0 8px;
         }
     }

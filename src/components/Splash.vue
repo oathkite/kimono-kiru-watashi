@@ -34,19 +34,19 @@ export default {
                     return i * 240;
                 },
                 complete: (Anime) => {
-                    this.disappear()
-                    this.finish()
+                    this.disappear(this.finish)
                 }
             })
         },
-        disappear: function() {
+        disappear: function(callback) {
             Anime({
                 targets: '.splash',
                 opacity: 0,
                 translateY: 0,
                 duration: 1200,
                 easing: 'easeOutBack',
-                delay: 800
+                delay: 800,
+                complete: callback
             })
         }
     }
@@ -62,10 +62,10 @@ export default {
     left: 0;
     background: #FFF7E7;
     z-index: 100;
-    font-size: 28px;
+    font-size: 2rem;
 
     @include media(sm, max) {
-        font-size: 20px;
+        font-size: 1.4rem;
     }
 }
 
