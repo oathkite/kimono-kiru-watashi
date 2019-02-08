@@ -4,8 +4,8 @@
             <nuxt-link tag="li" to="/">
                 <a>トップ</a>
             </nuxt-link>
-            <nuxt-link tag="li" to="/visiting-dressing">
-                <a>ご挨拶</a>
+            <nuxt-link tag="li" to="/greeting">
+                <a>ごあいさつ</a>
             </nuxt-link>
             <nuxt-link tag="li" to="/visiting-dressing">
                 <a>訪問教室</a>

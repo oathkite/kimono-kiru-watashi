@@ -13,3 +13,18 @@ body {
         padding-bottom: 55px;
     }
 }
+
+.content-block {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.sentence-block {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    & + .sentence-block {
+        margin-top: 40px;
+    }
+}
