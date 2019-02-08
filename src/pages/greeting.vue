@@ -50,9 +50,12 @@ export default {
 <style lang="scss" scoped>
 .concept {
     padding-bottom: 80px;
-    line-height: 3;
     text-align: center;
     font-size: 1.2rem;
+
+    p {
+        line-height: 3;
+    }
 
     span {
         display: inline-block;

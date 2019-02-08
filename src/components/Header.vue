@@ -30,7 +30,7 @@ export default {
             </div>
             <div class="actions">
                 <div>
-                    <a class="button" href="https://docs.google.com/forms/d/1NcGRgto2Sh7yPCXoPlf6FYNUeSQYhNcth8LquxNDNhY/edit" target="_blank" rel="norefferer">
+                    <a class="button" href="https://tayori.com/form/6d663e5c7e48b2a85f57635234e699c89bfe6c07" target="_blank" rel="norefferer">
                         お問い合わせ
                     </a>
                 </div>

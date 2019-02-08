@@ -4,6 +4,10 @@ body {
     background: #FFF7E7;
 }
 
+p {
+    line-height: 1.8;
+}
+
 body {
     @include media(xl, max) {
         padding-bottom: 55px;
@@ -16,7 +20,33 @@ body {
 
 .content-block {
     max-width: 860px;
-    margin: 0 auto;
+    margin: 0 auto 80px;
+    padding: 0 30px;
+
+    @include media(md, max) {
+        padding: 0 15px;
+        margin-bottom: 40px;
+    }
+
+    & + .content-block {
+        border-top: 1px dashed #c2a731;
+        padding-top: 80px;
+
+        @include media(md, max) {
+            padding-top: 40px;
+        }
+    }
+}
+
+.content-title {
+    font-weight: normal;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+
+    @include media(md, max) {
+        font-size: 1.2rem;
+        text-align: center;
+    }
 }
 
 .sentence-block {
