@@ -14,13 +14,23 @@ export default {
     <div class="body">
         <site-header/>
         <main class="site-body">
-            <nuxt/>
+            <transition name="fade">
+                <nuxt/>
+            </transition>
         </main>
         <site-footer/>
     </div>
 </template>
 
 <style>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .8s;
+}
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+
 html {
     font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 16px;

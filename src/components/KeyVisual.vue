@@ -39,8 +39,8 @@
         <svg viewBox="0 0 1053 581">
             <g class="kv-images">
                 <image class="kv-image img0" xlink:href="~/static/images/test-kv.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#round-1)"></image>
-                <image class="kv-image img1" xlink:href="~/static/images/test-kv-2.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#round-1)"></image>
-                <image class="kv-image img2" xlink:href="~/static/images/test-kv-3.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#round-1)"></image>
+                <!-- <image class="kv-image img1" xlink:href="~/static/images/test-kv-2.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#round-1)"></image>
+                <image class="kv-image img2" xlink:href="~/static/images/test-kv-3.png" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" clip-path="url(#round-1)"></image> -->
             </g>
             <clipPath id="round-1">
                 <path d="M0.824768329,292.5 C0.824768329,387 112.886061,512 196.090368,537 C279.294676,562 496.203014,581 612.592855,581 C728.982695,581 915.110249,520 972.82422,457 C1030.53819,394 1065.16657,280.5 1047.85238,216.5 C1030.53819,152.5 1002.16215,88.5 906.934104,56.5 C811.706052,24.5 682.811519,8.52651283e-14 541.412291,8.52651283e-14 C400.013064,8.52651283e-14 210.999811,7.5 130.681202,56.5 C50.3625929,105.5 0.824768329,198 0.824768329,292.5 Z"></path>
@@ -59,7 +59,7 @@ export default {
             'isSplashFinish'
         ]),
         imgMax: function() {
-            return document.querySelectorAll('.kv-image').length - 1
+            return document.querySelectorAll('.kv-text').length - 1
         },
         nextSlide: function() {
             if (this.current >= this.imgMax) {
@@ -81,11 +81,11 @@ export default {
     },
     methods: {
         show: function() {
-            Anime({
-                targets: '.kv-image.img' + this.current,
-                opacity: 1,
-                easing: 'easeInOutQuad'
-            })
+            // Anime({
+            //     targets: '.kv-image.img' + this.current,
+            //     opacity: 1,
+            //     easing: 'easeInOutQuad'
+            // })
 
             Anime({
                 targets: '.kv-text.text' + this.current + ' span',
@@ -102,12 +102,12 @@ export default {
             })
         },
         hide: function() {
-            Anime({
-                targets: '.kv-image.img' + this.current,
-                opacity: 0,
-                easing: 'easeInOutQuad',
-                delay: 2000
-            })
+            // Anime({
+            //     targets: '.kv-image.img' + this.current,
+            //     opacity: 0,
+            //     easing: 'easeInOutQuad',
+            //     delay: 2000
+            // })
 
             Anime({
                 targets: '.kv-text.text' + this.current + ' span',
