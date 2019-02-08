@@ -5,16 +5,10 @@
                 <a>トップ</a>
             </nuxt-link>
             <nuxt-link tag="li" to="/visiting-dressing">
+                <a>ご挨拶</a>
+            </nuxt-link>
+            <nuxt-link tag="li" to="/visiting-dressing">
                 <a>訪問教室</a>
-            </nuxt-link>
-            <nuxt-link tag="li" to="/visiting-dressing">
-                <a>前結び着付</a>
-            </nuxt-link>
-            <nuxt-link tag="li" to="/visiting-dressing">
-                <a>着せ付</a>
-            </nuxt-link>
-            <nuxt-link tag="li" to="/visiting-dressing">
-                <a>販売</a>
             </nuxt-link>
         </ul>
     </nav>

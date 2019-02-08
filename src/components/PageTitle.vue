@@ -8,7 +8,8 @@
 .page-title {
     font-weight: normal;
     z-index: 10;
-    background: #fff;
+    // background: #fff;
     text-align: center;
+    font-size: 36px;
 }
 </style>

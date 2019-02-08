@@ -1,9 +1,11 @@
 <script>
 import SiteHeader from '~/components/Header.vue'
+import SiteFooter from '~/components/Footer.vue'
 
 export default {
     components: {
-        SiteHeader
+        SiteHeader,
+        SiteFooter
     }
 }
 </script>
@@ -14,6 +16,7 @@ export default {
         <main class="site-body">
             <nuxt/>
         </main>
+        <site-footer/>
     </div>
 </template>
 

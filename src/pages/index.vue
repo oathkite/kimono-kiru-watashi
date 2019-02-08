@@ -41,20 +41,21 @@ export default {
 <style lang="scss" scoped>
 .intro {
     text-align: center;
-    padding: 48px 32px;
+    padding: 80px 32px;
 
     @include media(sm, max) {
-        padding: 16px;
+        padding: 30px;
     }
 }
 
 .lead {
-    font-size: 1.6rem;
+    font-size: 2rem;
+    letter-spacing: 0.4rem;
     margin-bottom: 32px;
 
     @include media(sm, max) {
-        margin-bottom: 16px;
-        font-size: 1.2rem;
+        margin-bottom: 30px;
+        font-size: 1.4rem;
 
         span {
             display: block;
@@ -66,7 +67,7 @@ export default {
     line-height: 2.4;
 
     @include media(sm, max) {
-        font-size: 0.8rem;
+        font-size: 1rem;
 
         span {
             display: block;
@@ -75,6 +76,32 @@ export default {
         br {
             display: none;
         }
+    }
+}
+
+.feature {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 80px;
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+
+    &-item {
+        width: 30%;
+        padding: 0 20px;
+        transition: opacity ease 0.4s;
+
+        &:hover {
+            opacity: 0.6;
+        }
+    }
+
+    &-name {
+        text-align: center;
+        margin-top: 10px;
     }
 }
 </style>

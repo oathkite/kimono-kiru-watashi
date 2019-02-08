@@ -35,7 +35,7 @@ export default {
                     </a>
                 </div>
                 <div class="call">
-                    <i class="fas fa-phone"></i> <a href="tel:0762734182">076-273-4182</a>
+                    <i class="fas fa-phone"></i> <a href="tel:0762734182">090-6814-2608</a>
                 </div>
             </div>
         </div>
