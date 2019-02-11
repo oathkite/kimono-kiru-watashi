@@ -73,6 +73,12 @@ $color: rgb(194, 167, 49);
     display: flex;
     align-items: center;
     padding: 16px 32px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FFF7E7;
+    z-index: 100;
 
     @include media(sm, max) {
         padding: 8px 16px;

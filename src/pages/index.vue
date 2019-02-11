@@ -3,6 +3,7 @@ import KeyVisual from '~/components/KeyVisual.vue'
 import Splash from '~/components/Splash.vue'
 
 export default {
+    scrollToTop: true,
     components: {
         KeyVisual,
         Splash

@@ -8,11 +8,14 @@
 
             <div class="kv-texts">
                 <div class="kv-text text0">
-                    <span>あ</span>
-                    <span>、</span>
-                    <span>着</span>
-                    <span>れ</span>
+                    <span>ゆ</span>
+                    <span>っ</span>
+                    <span>く</span>
+                    <span>り</span>
+                    <span>ゆ</span>
+                    <span>っ</span>
                     <span>た</span>
+                    <span>り</span>
                 </div>
 
                 <div class="kv-text text1">
@@ -24,14 +27,12 @@
                 </div>
 
                 <div class="kv-text text2">
-                    <span>や</span>
+                    <span>あ</span>
                     <span>っ</span>
-                    <span>て</span>
-                    <span>来</span>
-                    <span>る</span>
-                    <span>の</span>
-                    <span>で</span>
-                    <span>す</span>
+                    <span>着</span>
+                    <span>れ</span>
+                    <span>た</span>
+                    <span>！</span>
                 </div>
             </div>
         </div>

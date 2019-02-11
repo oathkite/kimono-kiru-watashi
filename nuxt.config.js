@@ -1,7 +1,7 @@
 const pkg = require('./package')
 
 module.exports = {
-  mode: 'spa',
+  mode: 'ssr',
   srcDir: 'src',
   head: {
     titleTemplate: '%s | きもの 着る・私 － 石川・富山の訪問着付教室',
@@ -31,6 +31,11 @@ module.exports = {
       { rel: 'image/png', sizes: '16x16', href: '/android-icon-16x16.png' },
       { rel: 'manifest', href: '/manifest.json' }
     ]
+  },
+  router: {
+    scrollBehavior: function (to, from, savedPosition) {
+      return { x: 0, y: 0 }
+    }
   },
   loading: { color: '#fff' },
   css: [

@@ -16,6 +16,14 @@ body {
     @include media(sm, max) {
         padding-bottom: 55px;
     }
+
+    @include media(sm, min) {
+        padding-top: 120px;
+    }
+
+    @include media(sm, max) {
+        padding-top: 81px;
+    }
 }
 
 .content-block {
@@ -43,6 +51,11 @@ body {
     margin-bottom: 20px;
     font-size: 1.4rem;
 
+    &.center {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
     @include media(md, max) {
         font-size: 1.2rem;
         text-align: center;
@@ -56,5 +69,9 @@ body {
 
     & + .sentence-block {
         margin-top: 40px;
+    }
+
+    @include media(md, max) {
+        padding: 0;
     }
 }

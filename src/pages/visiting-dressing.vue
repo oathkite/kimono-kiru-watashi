@@ -2,6 +2,7 @@
 import PageTitle from '~/components/PageTitle.vue'
 
 export default {
+    scrollToTop: true,
     components: {
         PageTitle
     },
