@@ -30,12 +30,12 @@ export default {
             </div>
             <div class="actions">
                 <div>
-                    <a class="button" href="https://tayori.com/form/6d663e5c7e48b2a85f57635234e699c89bfe6c07" target="_blank" rel="norefferer">
+                    <a class="button" href="https://tayori.com/form/6687fce6fc8516011260a663d5fc49e4d47a2419" target="_blank" rel="norefferer">
                         お問い合わせ
                     </a>
                 </div>
                 <div class="call">
-                    <i class="fas fa-phone"></i> <a href="tel:0762734182">090-6814-2608</a>
+                    <i class="fas fa-phone"></i> <a href="tel:09068142608">090-6814-2608</a>
                 </div>
             </div>
         </div>
