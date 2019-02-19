@@ -49,7 +49,8 @@ module.exports = {
     ['nuxt-sass-resources-loader', [
       '~/assets/scss/_variables.scss',
       '~/assets/scss/_mixins.scss'
-    ]]
+    ]],
+    ['@nuxtjs/google-tag-manager', { id: 'GTM-PWK7L4T' }]
   ],
   build: {
     postcss: [
