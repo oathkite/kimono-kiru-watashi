@@ -62,11 +62,12 @@ export default {
         </div>
 
         <div class="content-block">
-            <h2 class="content-title">着付の教室（前結び型）</h2>
-            <!-- <p class="lead">ご自宅でゆっくりゆったりレッスンを受けられる、家庭訪問型の着付け教室です。月１回から、ご都合に合わせてお選びいただけます。</p> -->
+            <h2 class="content-title">帯結びは前結び型です</h2>
+            <p class="lead">きもの着る私では「前結び型」の帯結びをお教えしています。<br>身体の前で帯を結び、最後に後ろへくるりと回して仕上げます。自分の目で確認しながら結ぶことができ、背中での作業がほとんどありません。身体に負担がかからない楽な帯結びです。</p>
+        </div>
 
-            <h3>準備品</h3>
-
+        <div class="content-block">
+            <h2 class="content-title">準備品</h2>
             <p>教室の際は、下記のリストに記載されているものをご準備ください。ご用意が難しい場合はご相談ください。</p>
 
             <ul class="disc-list">
